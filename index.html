@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Agent Travel | Paradis</title>
+</head>
+<body>
+    <header>
+        <!--Smooth scroling-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                            },800, function(){
+                                window.location.hash = hash;
+                            });
+                    }
+                });
+            });
+</script>
+        <!--navbar-->
+        <nav class="nav-container">
+            <img src="Assets/pp.png" alt="Logo"/>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#package">Our Package</a>
+                <a href="#call">Call Us</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--conten-->
+        <section id="home">
+            <div class="conten-container">
+                <div class="title">
+                    <h1>Heaven's Wings</h1>
+                    <p>Agent Travel pertama yang menyajikan pengalaman <span>yang tidak biasa.</span> </p>
+                </div>
+                
+                <div class="content">
+                    <!--conten sebelah kiri-->
+                    <div class="review">
+                        <div class="img-review">
+                            <div class="slide">
+                                <img class="slide-img" src="Assets/jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg" alt="Travel"/>
+                                <img class="slide-img" src="Assets/600x400_kastra.jpg" alt="Travel"/>
+                                <img class="slide-img" src="Assets/India_Gate_600x400.jpg" alt="Travel"/>
+                                <script>
+                                    var myIndex = 0;
+                                    carousel();
+
+                                    function carousel() {
+                                    var i;
+                                    var x = document.getElementsByClassName("slide-img");
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                    }
+                                    myIndex++;
+                                    if (myIndex > x.length) {myIndex = 1}    
+                                    x[myIndex-1].style.display = "block";  
+                                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                                    }
+                                </script>
+                            </div>
+                            <p>"Asik nya liburan bersama teman-teman menggunakan jasa Heaven's Wings."</p>
+                        </div>
+
+                        <div class="review-person">
+                            <img src="Assets/pp waduh.jpg" alt="profile"/>
+                            <div class="person-name">
+                                <h6>Jono Bahrun</h6>
+                                <p>Supir Angkot, 40</p>   
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="head-benefit">
+                            <div class="benefit-disc">
+                                <h1>Kami selalu mengutamakan kepuasan dan kebahagaan client dalam menggunakan jasa kami.</h1>
+                            </div>
+                            <ul class="benefit-list">
+                                <li>
+                                    <div class="list-num">1</div>
+                                    <p class="benefit">Dapatkan pengalaman.</p></li>
+                                <li>
+                                    <div class="list-num">2</div>
+                                    <p class="benefit">Nikmati liburan.</p></li>
+                                <li>
+                                    <div class="list-num">3</div>
+                                    <p class="benefit">Rasakan suasana baru.</p></li>                
+                            </ul>
+                        </div> 
+                    </div>
+                    <!--conten sebelah kanan-->
+                    <div class="contac-us">
+                        <div class="card">
+                            <h1>Contact us</h1>
+                            <p>Seles kami akan menghubungi anda dalam 1x24 jam setelah data kami terima.</p>
+                        <form name="formPendaftaran"class="formulir" action="" method="post" onsubmit="return validateForm()">
+                            <div class="input"><label for="">Nama Kamu:</label>
+                                <input class="nama-eml" type="text" name="nama" placeholder="Nama" />
+                            </div>
+                            <div class="input">
+                                <label for="">Email:</label>
+                                <input class="nama-eml" type="text" name="email" placeholder="Contoh@email.com"/>
+                            </div>
+                            <div class="input">
+                                <label for="">Apa yang membuatmu tertarik?</label>
+                                <select class="nama-eml" name="ketertarikan" id="pilihan">
+                                    <option value="0" disabled>Pilih</option>
+                                    <option value="1">Budaya</option>
+                                    <option value="2">Alam</option>
+                                    <option value="3">Kuliner</option>
+                                </select>
+                            </div>
+                                <button class="btn" type="submit">Kirim</button>
+                        </form>
+                        </div>
+                        <script>
+                            function validateForm() {
+                                if (document.forms["formPendaftaran"]["nama"].value == "") {
+                                    alert("Nama Tidak Boleh Kosong");
+                                    document.forms["formPendaftaran"]["nama"].focus();
+                                    return false;
+                                }
+                                if (document.forms["formPendaftaran"]["email"].value == "") {
+                                    alert("Email Tidak Boleh Kosong");
+                                    document.forms["formPendaftaran"]["email"].focus();
+                                    return false;
+                                }
+                                if (document.forms["formPendaftaran"]["ketertarikan"].selectedIndex < 0) {
+                                    alert("Pilih Jurusan.");
+                                    document.forms["formPendaftaran"]["ketertarikan"].focus();
+                                    return false;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!--package-->
+            <div id="package">
+                <div class="title-package">
+                    <h1>Our Package</h1>
+                </div>
+                <div class="package-container">
+                    <div class="package-top">
+                        <div class="kota">
+                            <div class="icon">
+                                <img src="Assets/png-transparent-airplane-flight-air-travel-computer-icons-plane-angle-logo-airplane.png" alt=" icon pesawat"/>
+                            </div>
+                            <div class="desteny"">
+                                <h3>Serang</h3>
+                                <p>Serang adalah kota yang luas.</p>
+                            </div>
+                        </div>
+                        <div class="kota">
+                            <div class="icon">
+                                <img src="Assets/png-transparent-airplane-flight-air-travel-computer-icons-plane-angle-logo-airplane.png" alt=" icon pesawat"/>
+                            </div>
+                            <div class="desteny">
+                                <h3>Atlantis</h3>
+                                <p>Atlantis adalah tempat yang paling misterius.</p>
+                            </div>
+                        </div>
+                        <div class="kota">
+                            <div class="icon">
+                                <img src="Assets/png-transparent-airplane-flight-air-travel-computer-icons-plane-angle-logo-airplane.png" alt=" icon pesawat"/>
+                            </div>
+                            <div class="desteny"">
+                                <h3>Afrika</h3>
+                                <p>Budaya baru dan rasakan kebersamaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="package-bot">
+                        <div class="kota">
+                            <div class="icon">
+                                <img src="Assets/tas.png" alt="tas">
+                            </div>
+                            <div class="desteny"">
+                                <h3>Iraq</h3>
+                                <p>Macam-macam kuliner  luar biasa tak akan terlupakan.</p>
+                            </div>
+                        </div>
+                        <div class="kota">
+                            <div class="icon">
+                                <img src="Assets/tas.png" alt="tas">
+                            </div>
+                            <div class="desteny">
+                                <h3>Ukraina</h3>
+                                <p>Nikmati harum nya alam "jangan lupa tutup pintu".</p>
+                            </div>
+                        </div>
+                        <div class="kota">
+                            <div class="icon">
+                                <img src="Assets/tas.png" alt="tas">
+                            </div>
+                            <div class="desteny"">
+                                <h3>Russia</h3>
+                                <p>bersama keluarga membangun manusia salju.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!--closesing-->
+            <div class="closing">
+                <h1>Mau coba Heaven's Wings?</h1>
+                <p>Silahkan hubungi kami dengan mengklik tombol dibawah ini.</p>
+                <input class="btn" type="submit" value="CALL TO ACTION"/>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="call">
+            <div class="foot-container">
+                <div class="footer-logo">
+                    <img src="Assets/pp.png" alt="Logo"/>
+                </div>
+                <div class="foot-law">
+                    <p>Terms of Service</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="copyright">
+                    <p>© 2022 Bagas</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
